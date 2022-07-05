@@ -16,7 +16,7 @@ pipeline {
         
         stage('Package Spring Boot application into a JAR via Maven') {
             steps {
-                sh "mvn package"
+                sh "./mvnw package"
             }
         }
         
