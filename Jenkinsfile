@@ -16,6 +16,7 @@ pipeline {
         
         stage('Package Spring Boot application into a JAR via Maven') {
             steps {
+                sh 'chmod a+x mvnw'
                 sh "./mvnw package"
             }
         }
