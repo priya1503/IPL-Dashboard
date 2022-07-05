@@ -1,5 +1,10 @@
 FROM openjdk:11
 
-COPY ipl-dashboard-0.0.1-SNAPSHOT.jar app.jar
-EXPOSE 8081
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+WORKDIR /app
+
+COPY .mvn/ .mvn
+COPY mvnw pom.xml ./
+
+COPY src ./src
+
+CMD ["./mvnw", "spring-boot:run"]
