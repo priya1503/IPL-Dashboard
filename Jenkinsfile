@@ -23,7 +23,7 @@ pipeline {
 
         stage('Build docker images') {
             steps {
-                sh "docker build -f Dockerfile-app -t ${dockerAppImageTag} ."
+                sh "docker build -f Dockerfile -t ${dockerAppImageTag} ."
                
             }
         }
