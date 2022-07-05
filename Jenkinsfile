@@ -24,7 +24,7 @@ pipeline {
 
         stage('Build docker images') {
             steps {
-                sh "docker build -f Dockerfile -t ${dockerAppImageTag} $WORK_SPACE"
+                sh "docker build -f Dockerfile -t ${dockerAppImageTag} $WORKSPACE"
                 sh "echo $WORKSPACE"
                 sh "echo $JOB_NAME"
             }
