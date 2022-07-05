@@ -25,7 +25,7 @@ pipeline {
         stage('Build docker images') {
             steps {
                 sh "docker build -f Dockerfile -t ${dockerAppImageTag} ."
-               
+                sh "readlink -f ipl-dashboard-0.0.1-SNAPSHOT.jar"
             }
         }
 
