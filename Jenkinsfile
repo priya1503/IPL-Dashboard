@@ -1,4 +1,4 @@
-def projectName = 'ipl_dashboard'
+def projectName = 'ipldashboard'
 def version = "0.0.${currentBuild.number}"
 def dockerImageTag = "${projectName}:${version}"
 
