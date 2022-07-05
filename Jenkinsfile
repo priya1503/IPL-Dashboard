@@ -24,9 +24,9 @@ pipeline {
 
         stage('Build docker images') {
             steps {
-                sh "docker build -f Dockerfile -t ${dockerAppImageTag} /var/lib/jenkins/workspace/iplboard"
+                sh "docker build -f Dockerfile -t ${dockerAppImageTag} $WORK_SPACE"
                 sh "echo $WORKSPACE"
-                sh "echo JOB_NAME"
+                sh "echo $JOB_NAME"
             }
         }
 
