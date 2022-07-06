@@ -20,7 +20,6 @@ pipeline {
                 sh "./mvnw package"
             }
         }
-        
 
         stage('Build docker images') {
             steps {
