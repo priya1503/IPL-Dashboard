@@ -3,7 +3,6 @@ def version = "0.0.${currentBuild.number}"
 
 def appName = "${projectName}-app"
 
-
 def dockerAppImageTag = "${projectName}-app:${version}"
 
 pipeline {
