@@ -22,7 +22,10 @@ public class TeamController {
         this.teamRepository = teamRepository;
         this.matchRepository = matchRepository;
     }
-
+    @GetMapping("/")
+    public String hello(){        
+        return "Hello";
+    }
     @GetMapping("/team/{teamName}")
     public Team getTeam(@PathVariable String teamName){
         Team team = this.teamRepository.findByTeamName(teamName);
