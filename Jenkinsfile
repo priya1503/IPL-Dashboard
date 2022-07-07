@@ -2,9 +2,9 @@ def projectName = 'ipl-dashboard-server'
 
 def version = "0.0.${currentBuild.number}"
 
-def appName = "${projectName}-app"
+def appName = "${projectName}"
 
-def dockerAppImageTag = "${projectName}-app:${version}"
+def dockerAppImageTag = "${projectName}:${version}"
 
 pipeline {
     agent any
