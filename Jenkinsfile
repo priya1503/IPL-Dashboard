@@ -1,4 +1,4 @@
-def projectName = 'ipl-dashboard'
+def projectName = 'ipldashboard'
 
 def version = "0.0.${currentBuild.number}"
 
